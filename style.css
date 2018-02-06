@@ -1,0 +1,88 @@
+.layoutFortables {
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  margin: 0 auto;
+}
+.form {
+  position: fixed;
+  margin: 20px auto;
+  margin-left: 36%;
+  background-color: white;
+  height: 70%;
+  width: 27%;
+  flex-direction: column;
+}
+.form.show {
+  display: block;
+}
+.form.hide {
+  display: none;
+}
+.form input {
+  margin-left: 20px;
+}
+form p {
+  text-align: left;
+  margin-left: 20px;
+}
+.table {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #EEE;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table:hover {
+box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3); 
+}
+body {
+  background-color: #E1D7D4;
+  font-family: 'Roboto Mono', monospace;
+}
+.tableFinder {
+  text-align: center;
+  color: #E34E45;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+.findTable {
+  text-align: center;
+}
+h1 {
+  font-family: Rubik;
+  font-weight: 700;
+  color: #E34E45;
+}
+#saveButton {
+  background-color: #008000;
+   box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+   width: 90%;
+   height: 30px;
+   align-items: center;
+   color: white;
+   margin-top: 25%;
+   margin-left: 30px;
+}
+#close {
+  text-align: right;
+  color: #CCC;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+input {
+  border-bottom: 2px solid #CCC;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  display: inline;
+  padding-top: 45px;
+}
+.form p {
+  color: #E34E45;
+}

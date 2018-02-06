@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <div class="tableFinder">
+    <h1>Table Finder</h1>
+  </div>
+  <div class="findTable">
+    <h2>Pick your table now</h2>
+  </div>
+  <form class="form hide" action="javascript:void(0);">
+    <a href="#" id="close">x</a>
+    <p>New Reservation</p>
+    <p>Table Number: <span class="num"></span></p>
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Phone number" />
+    <input type="text" placeholder="Size of party" />
+    <button id="saveButton">Save</button>
+  </form>
+  <div class="layoutFortables">
+    <div class="tableRow">
+      <div class="table available" id="1"><span class="table-number">1</span></div>
+      <div class="table available" id="4"><span class="table-number">4</span></div>
+      <div class="table available" id="7"><span class="table-number">7</span></div>
+    </div>
+    <div class="tableRow">
+      <div class="table available" id="2"><span class="table-number">2</span></div>
+      <div class="table available" id="5"><span class="table-number">5</span></div>
+      <div class="table available" id="8"><span class="table-number">8</span></div>
+    </div>
+    <div class="tableRow">
+      <div class="table available" id="3"><span class="table-number">3</span></div>
+      <div class="table available" id="6"><span class="table-number">6</span></div>
+      <div class="table available" id="9"><span class="table-number">9</span></div>
+    </div>
+  </div>
+  <script src="jquery-3.3.1 (1).js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
