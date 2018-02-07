@@ -1,24 +1,34 @@
 $(document).ready(function() {
-  var table_number = 0;
-  //step 1: when clicking on a table hide and show form
+  var table_number;
+  //when clicking on a table hide and show form
   $(".available").on("click", function() {
     $tablenumber = $(event.target).text();
     $(".num").html($tablenumber);
-    $(".form").toggleClass("show");
-    $(".form").toggleClass("hide");
+    // takes the form and fades it in instead of hide show
+    $( ".form" ).fadeIn( "fast" );
+    //$(".form").toggleClass("show");
+    //$(".form").toggleClass("hide");
     table_number = $(this).attr("id");
+    //added line below- adds the number to the form that you're on
+    $(".table available").text(table_number);
   })
-
-  //step 2: when you submit the form, should change the table to being unavailable
+  //when you submit the form, should change the table to being unavailable
   $("#saveButton").on("click", function() {
-    $("#" + table_number).css("background-color","#ADAAAA");
-    //step 4: change cursor property to not allowed if reserved table
-    $("#" + table_number).css("cursor", "not-allowed");
-    $(".form").toggleClass("hide");
+    $("#" + table_number).addClass("reserved");
+    //$(".form").toggleClass("hide"); fadeOut does same thing
+    // takes the form and fades out
+    $( ".form" ).fadeOut( "fast" );
+    //added 2 lines below, variables...
+    var name = $(".name").val();
+    var number = $(".size-of-party").val();
+    //get value of inputs in the console
+    $("#" + table_number).append("<div class='hover'><p>Name: "+ name +" </p><p> Size of party : " + number +"  </p></div>");
+    console.log($(".name").val(), $(".size-of-party").val());
   })
-  //step 3: when you click on the x, hide the form
+  //when you click on the x, hide the form THIS WORKS!!!
   $("#close").on("click", function() {
-    $(".form").toggleClass("hide");
+    //$(".form").toggleClass("hide"); fade out does same thing
+    $( ".form" ).fadeOut( "fast" );
   })
 
 });
